@@ -27,6 +27,7 @@ var BOOTSTRAP []string = []string {
 
 type Id []byte
 
+//节点的Id与网络地址信息
 type NodeInfo struct {
   Ip       net.IP
   Port     int
@@ -34,6 +35,7 @@ type NodeInfo struct {
   lastseen time.Time
 }
 
+//DHT网络节点
 type KNode struct {
   node    *NodeInfo
   routing *Routing
