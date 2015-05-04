@@ -370,7 +370,6 @@ func (krpc *KRPC) DecodePackage(data string, addr *net.UDPAddr) error {
       query.Q = val["q"].(string)
       query.A = val["a"].(map[string]interface{})
       msg.Args = query
-      krpc.dhtNode.log.Printf("query.Q is %s", query.Q )
       krpc.Query(msg)
     case "r":
       res := new(Response)
